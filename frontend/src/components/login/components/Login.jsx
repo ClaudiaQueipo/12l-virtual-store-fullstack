@@ -38,8 +38,7 @@ export default function Login() {
 
       toast.error('Invalid credentials')
     } catch (error) {
-      toast.error('Invalid credentials ', error)
-      console.log('las credenciales no son válidas error: ', error)
+      toast.error(`Invalid credentials ${error}`)
     } finally {
       setLoading(false)
     }

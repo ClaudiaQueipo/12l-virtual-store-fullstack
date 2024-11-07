@@ -121,7 +121,6 @@ export default function Products() {
     } else {
       const fieldErrors = result.error.flatten().fieldErrors
       setErrors(fieldErrors)
-      console.error('Errores de validación:', fieldErrors)
     }
   }
 

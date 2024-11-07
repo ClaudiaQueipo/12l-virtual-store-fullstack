@@ -58,14 +58,12 @@ const AddProductModal = ({ open, onClose, onProductAdded }) => {
     if (result.success) {
       try {
         await productService.createProduct(result.data, newProductType)
-        console.log('Producto creado con éxito')
         onClose()
-        onProductAdded()  
+        onProductAdded()
         setErrors({})
       } catch (error) {
-        console.error('Error al crear el producto:', error)
-      }
-      finally{
+        console.error('Error creating product:', error)
+      } finally {
         setNewProductDetails({
           code: '',
           name: '',
@@ -76,7 +74,6 @@ const AddProductModal = ({ open, onClose, onProductAdded }) => {
     } else {
       const fieldErrors = result.error.flatten().fieldErrors
       setErrors(fieldErrors)
-      console.error('Errores de validación:', fieldErrors)
     }
   }
 
@@ -166,7 +163,7 @@ const AddProductModal = ({ open, onClose, onProductAdded }) => {
 AddProductModal.propTypes = {
   open: PropTypes.bool.isRequired,
   onClose: PropTypes.func.isRequired,
-  onProductAdded: PropTypes.func.isRequired 
+  onProductAdded: PropTypes.func.isRequired
 }
 
 export default AddProductModal

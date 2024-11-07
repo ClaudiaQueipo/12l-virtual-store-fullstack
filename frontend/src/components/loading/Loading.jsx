@@ -25,7 +25,7 @@ const Loading = ({ loading }) => {
         }}
       >
         <CircularProgress color="primary" />
-        <Typography>Cargando...</Typography>
+        <Typography>Loading...</Typography>
       </Paper>
     </Backdrop>
   )

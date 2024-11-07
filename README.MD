@@ -14,5 +14,6 @@
    npm install
    ```
 3. 💻 Open the **backend** folder in your IDE or terminal, and install Spring Boot dependencies using Maven.
-4. ▶️ **Run the backend application**.
-5. ▶️ **Run the frontend application**.
+4. 🚀 Install Postgres and setup the variables in application.yml
+5. ▶️ **Run the backend application**.
+6. ▶️ **Run the frontend application**.
